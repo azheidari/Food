@@ -1,7 +1,13 @@
 import React from "react";
+import MainNavigation from "./MainNavigation";
 
 function ErrorPage() {
-  return <div>ErrorPage</div>;
+  return (
+    <>
+    <MainNavigation/>
+      <div>ErrorPage</div>
+    </>
+  );
 }
 
 export default ErrorPage;

@@ -43,11 +43,9 @@ function Navbar(props) {
           placeholder="Search Food "
         />
       </div>
-      <button
-        onClick={props.onShowCart}
-        className=" bg-black text-white items-center py-2 md:flex rounded-full"
-      >
-        <BsFillCartFill className="mr-2" size={20} /> Cart {numberOfCartContext}
+      <button className=" bg-black text-white items-center py-2 md:flex rounded-full">
+        <BsFillCartFill className="mr-2" size={20} onClick={props.onShowCart} />{" "}
+        Cart {numberOfCartContext}
       </button>
       {/* MOBILE MENUE */}
       {nav ? (

@@ -14,15 +14,15 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Home /> },
-      { path: "product", element: <Product /> },
-      { path: "food", element: <Food /> },
-      { path: "food/:id", element: <ProductDetails /> },
+      // { path: "food", element: <Food /> },
+      { path: ":id", element: <ProductDetails /> },
     ],
   },
 ]);
 
 function App() {
   return <RouterProvider router={router} />;
+  
 }
 
 export default App;

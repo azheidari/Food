@@ -9,6 +9,11 @@ function Food() {
 
   const [food, setFood] = useState(data);
 
+  const numberOfCartContext = cartCtx.items.reduce((curNumber, item) => {
+    return curNumber + item.amount;
+  }, 0);
+
+
   const filterFood = (fastfood) => {
     setFood(
       data.filter((item) => {
@@ -105,6 +110,9 @@ function Food() {
           </div>
         </div>
       </div>
+      <div>
+        <p>{numberOfCartContext}</p>
+      </div>
 
       {/* DESPLAY FOODS */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4 ">
@@ -113,7 +121,7 @@ function Food() {
             key={item.id}
             className="border shadow-lg hover:scale-105 duration-300"
           >
-            <Link to={`food/${item.id}`}>
+            <Link to={`${item.id}`} relative="">
               <img
                 src={item.image}
                 alt={item.name}
@@ -140,5 +148,6 @@ function Food() {
     </div>
   );
 }
+
 
 export default Food;

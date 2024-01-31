@@ -8,7 +8,10 @@ function HeadlineCards() {
         <div className="absolute w-full h-full bg-black/50 rounded-xl text-white">
           <p className="font-bold text-2 px-2 pt-4">Sun s Out, BOGO s Out</p>
           <p className="px-2">Through 8/26</p>
-          <button className="border-white bg-white text-black mx-2 absolute bottom-5  hover:bg-orange-500 hover:text-white m-1 hover:border-orange-500 hover:font-bold">
+          <button
+            className="border-white bg-white text-black mx-2 absolute bottom-5 
+           hover:bg-orange-500 hover:text-white m-1 hover:border-orange-500 hover:font-bold"
+          >
             Order Now
           </button>
         </div>

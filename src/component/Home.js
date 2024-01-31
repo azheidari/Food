@@ -5,6 +5,7 @@ import Food from "./Food";
 import Category from "./Category";
 import CartProvider from "./store/CartProvider";
 import Cart from "./Cart/Cart";
+import Navbar from "./navbar/Navbar";
 
 function Home() {
   const [cartIsShown, setCartIsShown] = useState(false);
@@ -20,7 +21,8 @@ function Home() {
   return (
     <CartProvider>
       {cartIsShown && <Cart onClose={hideCartHandler} />}
-      <Hero onShowCart={showCartHandler} />
+      <Navbar onShowCart={showCartHandler} />
+      <Hero />
       <HeadlineCards />
       <Food />
       <Category />
